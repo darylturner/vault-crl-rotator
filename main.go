@@ -36,7 +36,7 @@ func main() {
 
 		sec, err := tc.LookupSelf()
 		if err != nil {
-			log.Printf("error looking up token: %v\n", err)
+			log.Fatalf("error looking up token: %v\n", err)
 		}
 
 		if sec.Data["renewable"].(bool) {
